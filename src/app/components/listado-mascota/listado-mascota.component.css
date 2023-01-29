@@ -1,0 +1,39 @@
+.title{
+    background-color: gray;
+    text-align: center;
+    color: white;
+    padding: 80px;
+
+}
+table {
+    width: 100%;
+  }
+.container{
+    margin: 0 20%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+.delete{
+    color: red;
+    cursor: pointer;    
+}
+.edit{
+    color: blue;
+    cursor: pointer;    
+}
+.view{
+
+    color: green;
+    cursor: pointer;    
+}
+.agregar{
+    font-size: 10px;
+    line-height: 28px;
+}
