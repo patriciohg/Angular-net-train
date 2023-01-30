@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,8 @@ import { VerMascotaComponent } from './components/ver-mascota/ver-mascota.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //modulos
 import { SharedModule } from './shared/shared/shared.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
