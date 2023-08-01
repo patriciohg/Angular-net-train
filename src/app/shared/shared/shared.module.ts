@@ -19,6 +19,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 //Components
 import { SpinnerComponent } from '../spinner/spinner.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SpinnerComponent } from '../spinner/spinner.component';
     MatSnackBarModule,
     MatProgressBarModule,
     MatGridListModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],exports:[
     MatSlideToggleModule,
@@ -54,6 +56,7 @@ import { SpinnerComponent } from '../spinner/spinner.component';
     MatProgressBarModule,
     MatGridListModule,
     ReactiveFormsModule,
+    HttpClientModule,
     SpinnerComponent
   ]
 })

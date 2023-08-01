@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Mascota } from 'src/app/interfaces/interfaces';
+import { MascotaService } from 'src/app/services/mascota.service';
 
 const list_mascotas: Mascota[] = [
   {id: 1, nombre: 'Lupita',edad: 7, raza:"Puddle", color:"blanco", peso: 10},
@@ -37,12 +38,15 @@ export class ListadoMascotaComponent implements OnInit, AfterViewInit{
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private _snackbar: MatSnackBar){
-
+  constructor(private _snackbar: MatSnackBar, private _mascotaService: MascotaService) { 
+    
   }
 
-  ngOnInit(): void {
+
   
+
+  ngOnInit(): void {
+    this.obternerMascotas();
   }
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -64,6 +68,13 @@ export class ListadoMascotaComponent implements OnInit, AfterViewInit{
       verticalPosition: 'bottom'
     })
     
+  }
+  obternerMascotas(){
+    this._mascotaService.getMascotas().subscribe(data => {
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
   }
 
 }
